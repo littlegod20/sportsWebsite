@@ -1,12 +1,12 @@
 import { Outlet } from "react-router-dom";
-import DashBoard from "./components/DashBoard";
-import MoreGames from "./components/MoreGames";
+import DashBoard from "./components/widgets/DashBoard";
+import MoreGames from "./components/widgets/MoreGames";
 
 const Layout = () => {
   return (
-    <main className="h-screen">
+    <main className="h-screen relative flex flex-col justify-between">
       <MoreGames />
-      <section className="py-4 h-[80%] overflow-y-scroll ">
+      <section className="pb-4 overflow-y-scroll h-full relative">
         <Outlet />
       </section>
       <DashBoard />
