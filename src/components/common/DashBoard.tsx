@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useTransition } from "react";
 import { tabs } from "../../utils/constants";
-
 
 const DashBoard = () => {
   const [activeTab, setActiveTab] = useState("/");
+  const [isPending, startTransition] = useTransition();
 
   const handleActiveTab = (val: string) => {
-    setActiveTab(val);
+    startTransition(() => {
+      setActiveTab(val);
+    });
   };
 
   return (
