@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
-import DashBoard from "./components/widgets/DashBoard";
-import MoreGames from "./components/widgets/MoreGames";
+import DashBoard from "./components/common/DashBoard";
+import MoreGames from "./components/common/MoreGames";
 
 const Layout = () => {
   return (
