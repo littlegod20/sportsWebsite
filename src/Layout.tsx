@@ -6,7 +6,7 @@ const Layout = () => {
   return (
     <main className="h-screen relative flex flex-col justify-between">
       <MoreGames />
-      <section className="pb-4 overflow-y-scroll h-full relative">
+      <section className="overflow-y-scroll h-full relative">
         <Outlet />
       </section>
       <DashBoard />
