@@ -1,38 +1,7 @@
-import { IoHomeOutline } from "react-icons/io5";
-import { LiaTableTennisSolid } from "react-icons/lia";
-import { MdListAlt } from "react-icons/md";
-import { MdOutlineOnlinePrediction } from "react-icons/md";
-import { FaRegUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { tabs } from "../../utils/constants";
 
-const tabs = [
-  {
-    name: "Home",
-    icon: IoHomeOutline,
-    path: "/",
-  },
-  {
-    name: "All Sports",
-    icon: LiaTableTennisSolid,
-    path: "/allSports",
-  },
-  {
-    name: "My Bets",
-    icon: MdListAlt,
-    path: "/myBets",
-  },
-  {
-    name: "Live Now",
-    icon: MdOutlineOnlinePrediction,
-    path: "/liveNow",
-  },
-  {
-    name: "Account",
-    icon: FaRegUser,
-    path: "/account",
-  },
-];
 
 const DashBoard = () => {
   const [activeTab, setActiveTab] = useState("/");
