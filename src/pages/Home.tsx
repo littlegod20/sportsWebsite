@@ -3,16 +3,16 @@ import GameCard from "../components/ui/GameCard";
 import GameTab from "../components/widgets/GameTab";
 import { gameProps, gameTabs, options } from "../utils/constants";
 import Wagers from "../components/widgets/Wagers";
-import { FaAngleUp } from "react-icons/fa";
 import Games from "../components/widgets/Games";
 import WagerHeader from "../components/widgets/WagerHeader";
 import WagerTime from "../components/widgets/WagerTime";
 import TouchdownScorer from "../components/widgets/TouchdownScorer";
 import OddsToggle from "../components/widgets/OddsToggle";
+import BetSlip from "../components/widgets/BetSlip";
 
 const Home = () => {
   const [tabs, setTabs] = useState<gameProps[]>(gameTabs);
-  const [isBetSlip, setIsBetSlip] = useState(false)
+  const [isBetSlip, setIsBetSlip] = useState(false);
 
   const handleSelectTab = (val: string) => {
     setTabs((prevData) =>
@@ -25,8 +25,8 @@ const Home = () => {
   };
 
   const handleBetSlip = () => {
-    setIsBetSlip(!isBetSlip)
-  }
+    setIsBetSlip(!isBetSlip);
+  };
 
   return (
     <main className="overflow-y-scroll h-full w-screen text-xs">
@@ -72,21 +72,8 @@ const Home = () => {
         <TouchdownScorer />
       </section>
 
-      <section className="">
-        <div className={`flex justify-between p-3 bg-[#212121] z-50 transition-all duration-300 ease-in ${isBetSlip ? 'h-32' :''}`}>
-          <header className="flex gap-1 items-center font-bold">
-            <p className="px-2 py-1 text-black  rounded-full bg-blue-600">1</p>
-            <p className="text-blue-600">Betslip</p>
-          </header>
-          <div
-            className="flex items-center gap-2 cursor-pointer"
-            onClick={handleBetSlip}
-          >
-            <p>$10 wins $30,000</p>
-            <FaAngleUp className="text-blue-600" />
-          </div>
-        </div>
-
+      <section className={`${isBetSlip ? "sticky bottom-0" : ""}`}>
+        <BetSlip isBetSlip={isBetSlip} handleBetSlip={handleBetSlip} />
         {/* accept odds movement */}
         <OddsToggle />
       </section>
