@@ -1,5 +1,10 @@
 import Box from "../ui/Box";
 
+const boxes = [
+  {
+    
+  }
+]
 
 const Wagers = () => {
   return (

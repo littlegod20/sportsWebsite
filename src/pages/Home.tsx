@@ -74,7 +74,6 @@ const Home = () => {
 
       <section className={`${isBetSlip ? "sticky bottom-0" : ""}`}>
         <BetSlip isBetSlip={isBetSlip} handleBetSlip={handleBetSlip} />
-        {/* accept odds movement */}
         <OddsToggle />
       </section>
     </main>

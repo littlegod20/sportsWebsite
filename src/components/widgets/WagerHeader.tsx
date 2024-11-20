@@ -17,7 +17,7 @@ const WagerHeader = () => {
       </div>
       <div className="bg-[#343434] w-full flex justify-between px-2 py-3">
         <p>NFL</p>
-        <div className="w-1/2 flex justify-evenly uppercase">
+        <div className="w-4/6 flex justify-evenly uppercase">
           <p>Spread</p>
           <p>Money</p>
           <p>Total</p>
