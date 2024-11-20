@@ -1,5 +1,5 @@
 import { IoMdInformationCircleOutline } from "react-icons/io";
-
+import { Link } from "react-router-dom";
 
 const TouchdownScorer = () => {
   return (
@@ -10,7 +10,10 @@ const TouchdownScorer = () => {
           <IoMdInformationCircleOutline size={25} />
           <p>
             A touchdown scorer is a player who carries or receives the ball in
-            the end zone... <span className="text-blue-600">Read more</span>
+            the end zone...{" "}
+            <Link to="/" className="text-blue-600">
+              Read more
+            </Link>
           </p>
         </div>
       </div>
@@ -30,6 +33,6 @@ const TouchdownScorer = () => {
       </div>
     </>
   );
-}
+};
 
-export default TouchdownScorer
+export default TouchdownScorer;

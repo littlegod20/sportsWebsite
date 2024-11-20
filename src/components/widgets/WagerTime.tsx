@@ -1,5 +1,5 @@
 import { FaChevronRight } from "react-icons/fa";
-
+import { Link } from "react-router-dom";
 
 const WagerTime = () => {
   return (
@@ -12,14 +12,14 @@ const WagerTime = () => {
         </div>
         <div className="flex justify-between w-3/5 text-gray-300">
           <p>04- 02:29</p>
-          <div className="flex items-center text-blue-600 gap-1">
+          <Link to='/' className="flex items-center text-blue-600 gap-1 cursor-pointer">
             <p>More</p>
             <FaChevronRight />
-          </div>
+          </Link>
         </div>
       </div>
     </>
   );
-}
+};
 
-export default WagerTime
+export default WagerTime;
