@@ -33,14 +33,14 @@ const MoreGames = () => {
         <section className="flex gap-2 items-center overflow-x-scroll">
           {games.slice(0, 3).map((item, index) => (
             <div
-              className=" border-[1px] h-1/2 p-2 flex justify-center items-center gap-1 rounded-md border-sky-500 hover:cursor-pointer focus:border-4"
+              className=" border-[1px] h-1/2 p-2 flex justify-center items-center gap-1 rounded-md border-sky-500 hover:cursor-pointer focus:border-4 cursor-pointer"
               key={index}
             >
               <item.icon size={15} />
               <p className="text-nowrap">{item.name}</p>
             </div>
           ))}
-          <div className="p-2">
+          <div className="p-2 cursor-pointer">
             <p className="text-nowrap">View All</p>
           </div>
         </section>
