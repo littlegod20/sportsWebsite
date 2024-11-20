@@ -1,5 +1,6 @@
 import { IoMdInformationCircleOutline } from "react-icons/io";
 import { Link } from "react-router-dom";
+import TouchdownLists from "./TouchdownLists";
 
 const TouchdownScorer = () => {
   return (
@@ -17,19 +18,8 @@ const TouchdownScorer = () => {
           </p>
         </div>
       </div>
-      <div className="bg-[#212121] px-2 py-4 flex justify-between">
-        <div className="flex items-center gap-6">
-          <div className=" bg-black rounded-full relative p-2">
-            <img src="/jersey.png" alt="jersey" className="w-6" />
-            <div className="absolute top-1/3 -right-3 py-2 px-1 border rounded-full bg-[#212121] flex items-center">
-              <img src="/bengals.png" alt="team" className="w-4" />
-            </div>
-          </div>
-          <p>Zay Flowers</p>
-        </div>
-        <div className="border flex items-center p-2 rounded border-blue-600">
-          <p>+1000</p>
-        </div>
+      <div className="flex flex-col bg-[#212121] px-2 py-4">
+        <TouchdownLists />
       </div>
     </>
   );

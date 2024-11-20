@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
-import DashBoard from "./components/common/DashBoard";
-import MoreGames from "./components/common/MoreGames";
+import DashBoard from "../components/common/DashBoard";
+import MoreGames from "../components/common/MoreGames";
 import { Suspense } from "react";
 
 const Layout = () => {
