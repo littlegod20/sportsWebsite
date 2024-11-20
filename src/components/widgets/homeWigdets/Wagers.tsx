@@ -36,7 +36,6 @@ const Wagers = () => {
           : { ...item, isClicked: item.isClicked }
       )
     );
-    console.log("isBox:", isBox);
   };
 
   return (
