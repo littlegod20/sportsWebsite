@@ -23,23 +23,22 @@ const boxes = [
 ];
 
 const Wagers = () => {
-  const [activate, setActivate] = useState(false);
 
   const [isBox, setIsBox] = useState(
     boxes.map((item) => ({ ...item, isClicked: false }))
   );
 
   const handleBoxClick = async (val: string) => {
-    setActivate(!activate);
     setIsBox((prev) =>
       prev.map((item) =>
         val === item.odds
-          ? { ...item, isClicked: activate }
-          : { ...item, isClicked: false }
+          ? { ...item, isClicked: !item.isClicked }
+          : { ...item, isClicked: item.isClicked }
       )
     );
     console.log("isBox:", isBox);
   };
+
   return (
     <div className="flex pt-1">
       <section className="flex justify-center flex-col w-1/3 px-2 py-1">

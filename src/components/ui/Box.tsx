@@ -13,8 +13,6 @@ const Box: React.FC<BoxTypes> = ({ isClicked, OnClick, item }) => {
         } w-16 p-2 text-center flex flex-col rounded justify-center items-center cursor-pointer`}
         onClick={() => OnClick(item)}
       >
-        {/* <p>+3.5</p>
-        <p>-146</p> */}
         <p>{item}</p>
       </div>
     </>
