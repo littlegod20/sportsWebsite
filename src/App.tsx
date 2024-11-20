@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Layout from "./Layout";
+import Layout from "./layouts/Layout";
 import { lazy } from "react";
 import Home from "./pages/Home";
 
