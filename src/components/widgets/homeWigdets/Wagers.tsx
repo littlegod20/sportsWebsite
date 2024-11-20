@@ -1,8 +1,45 @@
+import { useState } from "react";
 import Box from "../../ui/Box";
 
-const boxes = [{}];
+const boxes = [
+  {
+    odds: "+3.5 -146",
+  },
+  {
+    odds: "+300",
+  },
+  {
+    odds: "O 63.5 -162",
+  },
+  {
+    odds: "-3.5 -112",
+  },
+  {
+    odds: "-430",
+  },
+  {
+    odds: "U 63.5 -215",
+  },
+];
 
 const Wagers = () => {
+  const [activate, setActivate] = useState(false);
+
+  const [isBox, setIsBox] = useState(
+    boxes.map((item) => ({ ...item, isClicked: false }))
+  );
+
+  const handleBoxClick = async (val: string) => {
+    setActivate(!activate);
+    setIsBox((prev) =>
+      prev.map((item) =>
+        val === item.odds
+          ? { ...item, isClicked: activate }
+          : { ...item, isClicked: false }
+      )
+    );
+    console.log("isBox:", isBox);
+  };
   return (
     <div className="flex pt-1">
       <section className="flex justify-center flex-col w-1/3 px-2 py-1">
@@ -33,14 +70,24 @@ const Wagers = () => {
 
       <section className="w-4/6 p-1 flex flex-col gap-2">
         <div className=" flex w-full justify-evenly">
-          <Box />
-          <Box />
-          <Box />
+          {isBox.slice(0, 3).map((item, index) => (
+            <Box
+              OnClick={handleBoxClick}
+              item={item.odds}
+              isClicked={item.isClicked}
+              key={index}
+            />
+          ))}
         </div>
         <div className=" flex w-full justify-evenly">
-          <Box />
-          <Box />
-          <Box />
+          {isBox.slice(3).map((item, index) => (
+            <Box
+              OnClick={handleBoxClick}
+              item={item.odds}
+              isClicked={item.isClicked}
+              key={index}
+            />
+          ))}
         </div>
       </section>
     </div>
