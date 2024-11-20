@@ -38,6 +38,7 @@ yarn dev
 
 ## 📂Project Structure
 
+```bash
 src/
 ├── components/
 ├ ├──common/
@@ -46,3 +47,4 @@ src/
 ├──layouts/
 ├── pages/
 └── utils/
+```
