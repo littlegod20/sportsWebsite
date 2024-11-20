@@ -1,18 +1,18 @@
-
 interface ButtonProps {
-  title: string,
-  onClick?: ()=>void
-  className?:string
+  title: string;
+  onClick?: () => void;
+  className?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({title, onClick, className}) => {
+const Button: React.FC<ButtonProps> = ({ title, onClick, className }) => {
   return (
-    <div className={`p-2 flex justify-center items-center ${className}`}>
-      <button onClick={onClick}>
-        {title}
-      </button>
+    <div
+      className={`p-2 flex justify-center items-center cursor-pointer ${className}`}
+      onClick={onClick}
+    >
+      {title}
     </div>
-  )
-}
+  );
+};
 
-export default Button
+export default Button;

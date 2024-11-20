@@ -1,5 +1,5 @@
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
-import Button from "../ui/Button";
+import Button from "../../ui/Button";
 
 interface SlipTypes {
   isBetSlip: boolean;
