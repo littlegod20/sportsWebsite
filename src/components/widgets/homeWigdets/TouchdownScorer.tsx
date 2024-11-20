@@ -7,7 +7,7 @@ const TouchdownScorer = () => {
       <div className="w-full bg-[#343434] p-4">
         <p className="font-bold pb-4">Any Time Touchdown Scorer</p>
         <div className="flex items-center gap-1">
-          <IoMdInformationCircleOutline size={25} />
+          <IoMdInformationCircleOutline size={25} className="cursor-pointer" />
           <p>
             A touchdown scorer is a player who carries or receives the ball in
             the end zone...{" "}

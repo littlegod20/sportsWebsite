@@ -1,14 +1,14 @@
 import { useState } from "react";
 import GameCard from "../components/ui/GameCard";
-import GameTab from "../components/widgets/GameTab";
+import GameTab from "../components/widgets/homeWigdets/GameTab";
 import { gameProps, gameTabs, options } from "../utils/constants";
-import Wagers from "../components/widgets/Wagers";
-import Games from "../components/widgets/Games";
-import WagerHeader from "../components/widgets/WagerHeader";
-import WagerTime from "../components/widgets/WagerTime";
-import TouchdownScorer from "../components/widgets/TouchdownScorer";
-import OddsToggle from "../components/widgets/OddsToggle";
-import BetSlip from "../components/widgets/BetSlip";
+import Wagers from "../components/widgets/homeWigdets/Wagers";
+import Games from "../components/widgets/homeWigdets/Games";
+import WagerHeader from "../components/widgets/homeWigdets/WagerHeader";
+import WagerTime from "../components/widgets/homeWigdets/WagerTime";
+import TouchdownScorer from "../components/widgets/homeWigdets/TouchdownScorer";
+import OddsToggle from "../components/widgets/homeWigdets/OddsToggle";
+import BetSlip from "../components/widgets/homeWigdets/BetSlip";
 
 const Home = () => {
   const [tabs, setTabs] = useState<gameProps[]>(gameTabs);

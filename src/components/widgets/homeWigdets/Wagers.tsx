@@ -1,10 +1,6 @@
-import Box from "../ui/Box";
+import Box from "../../ui/Box";
 
-const boxes = [
-  {
-    
-  }
-]
+const boxes = [{}];
 
 const Wagers = () => {
   return (
@@ -49,6 +45,6 @@ const Wagers = () => {
       </section>
     </div>
   );
-}
+};
 
-export default Wagers
+export default Wagers;
